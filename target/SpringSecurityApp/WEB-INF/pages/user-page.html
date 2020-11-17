@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Details</title>
+
+</head>
+<body>
+<h2>Hello, <th th:text=" ${user.username}"></th></h2>
+<h3>User INFO</h3>
+<tr>
+    <td>User Id:</td>
+    <th th:text="${user.id}"></th><br>
+</tr>
+
+<tr>
+    <td>User FirstName:</td>
+    <th th:text="${user.username}"></th><br>
+</tr>
+
+<tr>
+    <td>User Password:</td>
+    <th th:text="${user.password}"></th><br>
+</tr>
+<br>
+<br>
+<br>
+<h3> Logout</h3>
+<form th:action="@{/logout}">
+    <input type="submit" value="logout">
+</form>
+</body>
+</html>

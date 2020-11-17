@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<h3> Login </h3>
+    <form method="POST" action="/login">
+        <div>
+            <input name="username" type="text" placeholder="Username" autofocus="true"/>
+            <input name="password" type="password" placeholder="Password"/>
+            <button type="submit">Log In</button>
+        </div>
+    </form>
+
+    <h3> Back to Index Page </h3>
+<form th:action="@{/logout}">
+    <input type="submit" value="Return">
+</form>
+</body>
+</html>
+
+
